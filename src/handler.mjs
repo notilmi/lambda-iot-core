@@ -2,7 +2,7 @@ import { db } from "./db.mjs";
 
 export async function handler(event) {
   try {
-    const { timestamp, humidity, temperature } = event;
+    const { timestamp, humidity, temperature, origin } = event;
 
     await db.iotlog.create({
       data: {
