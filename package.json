@@ -1,0 +1,19 @@
+{
+  "name": "lambda-iot-core",
+  "version": "1.0.0",
+  "description": "A Lambda Handler For IoT Core Project (in case of Analytics With Mongo)",
+  "main": "src/handler.js",
+  "scripts": {
+    "compile": "tsc src/handler.ts",
+    "zip": "powershell Compress-Archive -Path .\\ -DestinationPath lambda.zip",
+    "deploy": "run-s compile zip"
+  },
+  "author": "ilmi",
+  "license": "MIT",
+  "devDependencies": {
+    "prisma": "^5.16.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.16.2"
+  }
+}
